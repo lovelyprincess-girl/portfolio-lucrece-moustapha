@@ -1,0 +1,81 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 720px;
+}
+
+.tl-item {
+  display: flex;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tl-item:first-child { border-top: 1px solid var(--border); }
+
+.tl-year {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--violet);
+  min-width: 80px;
+  padding-top: 3px;
+}
+
+.tl-content h3 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.tl-content p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.exp-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px 24px;
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.exp-card:hover,
+.exp-card.active {
+  border-color: rgba(139,92,246,0.6);
+  background: rgba(109,40,217,0.06);
+}
+
+.exp-card h3 {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+.exp-card .company {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--violet);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.exp-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}

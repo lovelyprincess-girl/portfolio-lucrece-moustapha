@@ -1,0 +1,30 @@
+.apropos-content {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.apropos-content p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.postes-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.postes-list li {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--violet);
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+}

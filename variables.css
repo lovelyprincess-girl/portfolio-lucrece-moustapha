@@ -1,0 +1,14 @@
+:root {
+  --violet: #8b5cf6;
+  --violet-deep: #6d28d9;
+  --violet-glow: #a78bfa;
+  --noir: #050508;
+  --noir2: #0d0d14;
+  --card-bg: rgba(13,10,25,0.82);
+  --border: rgba(139,92,246,0.25);
+  --text: #e2d9f3;
+  --muted: #9b87c2;
+  --accent: #c4b5fd;
+  --accent2: #34d399;
+  --warning: #fbbf24;
+}

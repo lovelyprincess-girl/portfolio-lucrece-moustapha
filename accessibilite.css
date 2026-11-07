@@ -1,0 +1,62 @@
+/* ═══════════════════════════════════════════
+   ACCESSIBILITÉ : navigation au clavier,
+   taille de texte minimale et liens lisibles
+   ═══════════════════════════════════════════ */
+
+/* Contour visible quand on navigue avec la touche Tab */
+:focus-visible {
+  outline: 2px solid var(--violet-glow);
+  outline-offset: 3px;
+}
+
+/* Titre de projet : un bouton qui garde l'apparence du titre */
+.proj-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Burger : bouton sans le style par défaut du navigateur */
+button.burger {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+/* Taille de texte minimale : 12px partout */
+.section-label,
+.btn-primary,
+.btn-ghost,
+.cert-meta,
+.cert-status,
+footer,
+.tl-year,
+.exp-card .company,
+nav a,
+.hero-tag,
+.filter-btn,
+.proj-num,
+.proj-tag,
+.proj-field strong,
+.stack-tag,
+.proj-link {
+  font-size: 12px;
+}
+
+/* Liens de la section Contact : lisibles sur fond sombre */
+.contact-row a,
+.contact-row a:visited {
+  color: var(--violet-glow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-row a:hover {
+  color: var(--accent);
+}

@@ -1,0 +1,63 @@
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  backdrop-filter: blur(18px) saturate(1.5);
+  background: rgba(5,5,8,0.55);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  color: var(--violet-glow);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.logo span { color: var(--muted); }
+
+nav { display: flex; gap: 28px; }
+
+nav a {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.25s;
+  position: relative;
+  white-space: nowrap;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 1px;
+  background: var(--violet);
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+nav a:hover { color: var(--accent); }
+nav a:hover::after { transform: scaleX(1); }
+
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  width: 22px;
+  height: 2px;
+  background: var(--muted);
+  transition: 0.3s;
+}

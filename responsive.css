@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  header { padding: 16px 24px; }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: rgba(5,5,8,0.97);
+    padding: 24px;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav.open { display: flex; }
+
+  .burger { display: flex; }
+
+  .hero { padding: 120px 24px 60px; }
+
+  section { padding: 70px 24px; }
+
+  footer { padding: 24px; }
+
+  .projects-grid { grid-template-columns: 1fr; }
+  .skills-grid   { grid-template-columns: 1fr; }
+  .exp-grid      { grid-template-columns: 1fr; }
+  .cert-grid     { grid-template-columns: 1fr; }
+}

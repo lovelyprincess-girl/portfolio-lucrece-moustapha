@@ -1,0 +1,124 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: var(--noir);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Fond fixe */
+.bg-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url('../assets/images/bg.webp');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: brightness(0.25) saturate(1.4);
+}
+
+.bg-fixed::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(109,40,217,0.18) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(5,5,8,0.3) 0%, rgba(5,5,8,0.65) 40%, rgba(5,5,8,0.97) 100%);
+}
+
+/* Scanlines */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 4px
+  );
+}
+
+.site { position: relative; z-index: 2; }
+
+section { padding: 100px 80px; }
+
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--violet);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--violet);
+}
+
+.section-title {
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 48px);
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+
+/* Boutons génériques */
+.btn-primary {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: var(--violet);
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.25s, box-shadow 0.25s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--violet-deep);
+  box-shadow: 0 0 30px rgba(139,92,246,0.4);
+}
+
+.btn-ghost {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 3px;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--violet);
+  color: var(--accent);
+}
+
+/* Fade-in au scroll */
+.fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: none;
+}
